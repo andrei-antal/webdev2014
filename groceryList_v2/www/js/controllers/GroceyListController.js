@@ -1,20 +1,9 @@
 app.controller('GroceryListCtrl',[ '$scope','$state', function ($scope,$state) {
 
-    $scope.groceryList = [{name:"a1"},{name:"a2"}];
-
-    $scope.addGroceryEntry = function(entry){
-        if(entry != "")
-        {
-            $scope.groceryList.push({name : entry});
-            $scope.groceryToAdd = "";
-        }
-    };
-
     $scope.deleteGroceryEntry = function(index)
     {
         if(index>=0 && index<$scope.groceryList.length)
         {
-
             $scope.groceryList.splice(index,1);
         }
     };
@@ -24,7 +13,17 @@ app.controller('GroceryListCtrl',[ '$scope','$state', function ($scope,$state) {
         $scope.groceryList = [];
     };
 
-    $scope.goToItemDetail = function() {
-        $state.go('listDetail');
+    $scope.goToItemTypeList = function() {
+
+        $state.go('typeList');
+    }
+
+    $scope.getTotalCost = function(){
+        var total = 0;
+        for(var i=0;i<$scope.groceryList.length;i++)
+        {
+            total += $scope.groceryList[i].price * $scope.groceryList[i].count;
+        }
+        return total;
     }
 }]);

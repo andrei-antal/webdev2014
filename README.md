@@ -95,9 +95,10 @@
 ```
 
 
-##PHASE 3 - Growcery list app v1.0 - List view##
+##PHASE 3 - Growcery list app v2.0 - List view##
 
 ###USEFUL LINKS###
+
 *  [Ionic CSS components](http://ionicframework.com/docs/components/)
 *  [Ionic JS directives](http://ionicframework.com/docs/api/)
 *  [Ionicons](http://ionicons.com/)
@@ -117,3 +118,56 @@
   
 
 ##PHASE 4 - Growcery list app v2.0 - Master detail##
+
+###USEFUL LINKS###
+
+*  [AngularJS ui-router](https://github.com/angular-ui/ui-router)
+
+
+1. In ```index.html``` :  
+  a. copy the html inside the ```<ion-pane>``` into a new partial html (main list partial)
+  b. place an ```<ion-nav-view >``` in the pane
+2. in ```app.js```
+  * create 3 states for ```$stateProvider``` : main list, grocery type list, grocery details list
+3. create 3 partials (root element is ```<ion-view>```):
+  * main list
+    * header with "add item" button
+    * list with added grocery items 
+    * every item should have a delete button and a batge with number of times an item has been addded to the list
+    * a footer displaying total price of grocery list
+  * grocery types 
+    * header with "back" and "add new" buttons
+    * list for grocery types displayng the names; click on list item adds it to main list
+    * an ```<ion-option-button>``` button for each list item
+  * grocery type detail
+    * header with "back" button
+    * 3 input fields for name, description and price
+    * save button
+  
+navigation between the partials:  
+```
+MAIN LIST <--- (add item || clickitem/back) ---> GROCERY TYPES <--- (add/edit type || save type/back  ) ---> GROCERY TYPE DETAIL
+```
+4. create a Grocery service that serves a list of grocery types to be added to grocery list
+  * the grocery item has the following structure:  
+  ``` {
+        name : string,
+        description : string,
+        price : number,
+        id : integer, autoincrement
+      }```
+  * add methods to get full grocery type list, a single item (by id) and to add a new item
+5. create controllers fo the partials:
+  * root controller
+    * contains the main grocery list, and method to add a new item
+  * main list
+    * methods to delete and calculate total cost
+    * click handler for add new item, change the state to grocery type view
+  * grocery types 
+    * get grocerie types list from service
+    * methods to add to main list, edit type and make a new type (by going to grocery type state, and passing the selected id, if it is the case)
+  * grocery type detail
+    * get grocery type details (if id is present in ```$stateParams```)
+    * save details and go back to type list
+
+##PHASE 4 - Growcery list app v3.0 - Firebase connection##   
