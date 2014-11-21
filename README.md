@@ -2,7 +2,7 @@
 
 ##PHASE 1 - prepareing work environment##
 
-0. Have Chrome installed from [here](http://www.google.com/chrome/)
+0. Have Chrome installed from [here](http://www.google.com/chrome/)  
 
 1. Instal node  
 
