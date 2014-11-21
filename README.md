@@ -116,4 +116,4 @@
 5. add a button in the ```<ion-header-bar>``` that will empty the list
   
 
-##PHASE 4 - Growcery list app v1.0 - Master detail##
+##PHASE 4 - Growcery list app v2.0 - Master detail##
