@@ -61,7 +61,7 @@
   ```
 5. Open Chrome and folow [http://localhost:8100](http://localhost:8100) to view your app  
 
-6. Explore project structure
+6. Explore project structure  
 
   ```bash
   ├── bower.json     // bower dependencies
@@ -83,4 +83,37 @@
       └── index.html      // application entry point
   ````
 
-##PHASE 3 - prepareing work environment##
+7. Create the following structure in the '''js''' folder  
+
+```bash
+  └── js     
+      ├── controllers             
+      ├── partials        // app image assets
+      ├── resources       // scripts folder - will contain controllers, services, partial views etc.
+      └── services        // application entry point
+      
+```
+
+
+##PHASE 3 - Growcery list app v1.0 - List view##
+
+###USEFUL LINKS###
+*  [Ionic CSS components](http://ionicframework.com/docs/components/)
+*  [Ionic JS directives](http://ionicframework.com/docs/api/)
+*  [Ionicons](http://ionicons.com/)
+
+
+1. In ```index.html``` :  
+  a. empty ```<body>``` tag  
+  b. create an ```<ion-pane>``` element with an ```<ion-header-bar>``` and ```<ion-content>``` inside
+  c. in the content tag, create ```<ion-list>``` with the following components:
+    * an input field and a button to add entries (in the same item element)
+    * a title for a list (as an item-divider) that will also contain the number of items in the list
+    * the next elements are ```<ion-item>```'s as grocery list entries
+2. Create a controller for the grocery list that contains an array of items and methods to add and remove as well as empty the list; add it as a ```ng-controller``` for the ```<ion-pane>```
+3. in ```index.html``` remove the statically created entries and replace it with one ```<ion-item>``` that uses ```ng-repeat``` to generate the list
+4. inside the ```<ion-item>``` add an ```<ion-option-button>``` that will delete the respective item list entry
+5. add a button in the ```<ion-header-bar>``` that will empty the list
+  
+
+##PHASE 4 - Growcery list app v1.0 - Master detail##

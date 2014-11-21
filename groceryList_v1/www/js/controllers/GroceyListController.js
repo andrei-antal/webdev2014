@@ -1,7 +1,6 @@
 app.controller('GroceryListCtrl',[ '$scope', function ($scope) {
 
     $scope.groceryList = [];
-    $scope.selectedItem = -1;
 
     $scope.addGroceryEntry = function(entry){
         if(entry != "")
@@ -11,7 +10,7 @@ app.controller('GroceryListCtrl',[ '$scope', function ($scope) {
         }
     };
 
-    $scope.deleteEntry = function(index)
+    $scope.deleteGroceryEntry = function(index)
     {
         if(index>=0 && index<$scope.groceryList.length)
         {
@@ -20,7 +19,7 @@ app.controller('GroceryListCtrl',[ '$scope', function ($scope) {
         }
     };
 
-    $scope.newList = function() {
+    $scope.newGroceryList = function() {
         console.log('here');
         $scope.groceryList = [];
     };
