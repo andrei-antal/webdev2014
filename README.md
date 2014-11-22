@@ -141,7 +141,7 @@
 ```
 
 
-##PHASE 4 - Growcery list app v2.0 - List view##
+##PHASE 4 - Growcery list app v1.0 - List view##
 
 ###USEFUL LINKS###
 
@@ -215,7 +215,7 @@
     * get grocery type details (if id is present in ```$stateParams```)
     * save details and go back to type list
 
-##PHASE 4 - Growcery list app v3.0 - Firebase connection##   
+##PHASE 6 - Growcery list app v3.0 - Firebase connection##   
 
 1. create firebase account [here](https://www.firebase.com/signup/)
 2. create firebase app from [dashboard](https://www.firebase.com/account/) (name it wbdv-your_full_name)
@@ -230,7 +230,7 @@
   * ```$add```
   * ```.set()```
 
-##PHASE 5 - Publish App on Android emulator ##
+##PHASE 7 - Publish App on Android emulator ##
 
 1. go to app directory
 2. add android platform
