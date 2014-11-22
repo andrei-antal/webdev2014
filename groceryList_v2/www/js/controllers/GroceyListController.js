@@ -8,17 +8,12 @@ app.controller('GroceryListCtrl',[ '$scope','$state', function ($scope,$state) {
         }
     };
 
-    $scope.newGroceryList = function() {
-        console.log('here');
-        $scope.groceryList = [];
-    };
-
     $scope.goToItemTypeList = function() {
 
         $state.go('typeList');
-    }
+    };
 
-    $scope.getTotalCost = function(){
+    $scope.getTotalCost = function() {
         var total = 0;
         for(var i=0;i<$scope.groceryList.length;i++)
         {

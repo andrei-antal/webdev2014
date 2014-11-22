@@ -8,7 +8,6 @@ app.controller('GroceryTypeListCtrl',[ '$scope','$state','GroceryService', funct
     };
 
     $scope.addType = function(item){
-        console.log(item);
         $scope.addTypeToList(item);
         $state.go('mainList');
     };
